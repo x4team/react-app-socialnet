@@ -1,0 +1,13 @@
+.footer {
+    display: grid;
+    grid-area: footer;
+    background: #333333;
+    text-align: center;
+
+}
+
+.h3 {
+    font-size: 20px;
+    padding: 5px;
+    color: #fff;
+}
