@@ -1,6 +1,4 @@
 .profile {
-    /*display: grid;*/
-
     margin: 0;
     padding: 0;
     grid-area: profile;
@@ -13,17 +11,11 @@
 
 }
 .wrapper {
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 5fr;*/
-    /*grid-template-rows: 1fr;*/
     height: auto;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 5fr));
     max-height: 348px;
-
-    /*margin: 0;*/
-    /*padding: 0;*/
 }
 .usercard {
     width: 290px;

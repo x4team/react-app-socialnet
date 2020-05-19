@@ -21,19 +21,17 @@
   /*background: #ebf0f4;*/
 
   display: grid;
-  grid-template-columns: 1fr 5fr 15fr 1fr;
+  grid-template-columns: 1fr 15fr 1fr;
   grid-template-rows: 0.6fr 4fr 7fr 0.6fr;
   grid-template-areas:
-          "header header  header  header"
-          "navbar profile profile ."
-          "navbar aside   content ."
-          "footer footer  footer  footer";
+          "header   header    header "
+          "navbar   profile      .    "
+          "navbar   content      .    "
+          "footer   footer    footer ";
   min-height: 100vh;
   box-sizing: border-box;
     margin: 0;
     padding: 0;
-
-
   /*grid-template-columns: repeat(auto-fit,1fr);*/
   /*grid-template-rows: repeat(4,200px);*/
     font-family: 'Ubuntu', sans-serif;

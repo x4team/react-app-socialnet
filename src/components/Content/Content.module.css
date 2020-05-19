@@ -1,61 +1,21 @@
-.content {
-    margin-left: 10px;
+.wrapper {
     grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(375px, 5fr));*/
+    /*height: auto;*/
+    /*margin: 0;*/
+
+    min-width: 100%;
+    flex-direction: row; /* Выровнять по строке */
     background: #FFFFFF;
     box-sizing: border-box;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.70);
     border-radius: 5px;
-    color: #2F2F2F;
 }
 
-.wrapper {
-    padding: 20px;
-}
-
-.h3 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.form {
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.form__textarea {
-    width: 90%;
-    height: 45px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    color: #CBCBCD;
-    padding-left: 10px;
-}
-
-.form__button {
-    margin-left: 5px;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    color: #FFFFFF;
-    height: 45px;
-    background: #FEAD11;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.07), inset 0px 0px 7px rgba(255, 255, 255, 0.07);
-    border-radius: 5px;
 
 
-}
-
-.posts {
-    font-size: 18px;
-    padding-top: 15px;
-    color: #76747B;
-}
