@@ -23,10 +23,10 @@
   display: grid;
   grid-template-columns: 1fr 20fr 1fr;
   grid-template-areas:
-          "header header header"
-          "navbar profile ."
-          "navbar content ."
-          ". footer .";
+          "header header"
+          "navbar profile"
+          "navbar content"
+          ". footer";
   grid-template-rows: 50px 348px 1fr 50px;
   min-height: 100vh;
   box-sizing: border-box;

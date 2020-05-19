@@ -13,8 +13,8 @@
 .wrapper {
     height: auto;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 5fr));
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(375px, 5fr));*/
     max-height: 348px;
 }
 .usercard {
