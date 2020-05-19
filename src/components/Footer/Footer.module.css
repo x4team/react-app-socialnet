@@ -1,9 +1,7 @@
 .footer {
-    display: grid;
     grid-area: footer;
     background: #333333;
     text-align: center;
-
 }
 
 .h3 {

@@ -6,7 +6,7 @@ import Aside from './Aside/Aside.jsx'
 const Content = () => {
     return (
         <div className={c.wrapper}>
-            <Aside />
+            <Aside className={c.aside}/>
             <Post message='Hi, how are you?' likesCount='50'/>
         </div>
     )
