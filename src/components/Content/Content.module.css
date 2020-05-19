@@ -1,6 +1,7 @@
 .wrapper {
     grid-area: content;
     display: grid;
+    min-height: 50vw;
     grid-template-columns: repeat(auto-fit, minmax(300px, 5fr));
     background: #FFFFFF;
     box-sizing: border-box;
