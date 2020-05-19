@@ -21,9 +21,9 @@
   /*background: #ebf0f4;*/
 
   display: grid;
-  grid-template-columns: 1fr 20fr 1fr;
+  grid-template-columns: 1fr 20fr;
   grid-template-areas:
-          "header header"
+          "navbar header"
           "navbar profile"
           "navbar content"
           ". footer";
