@@ -12,23 +12,35 @@ import Friends from "./components/Friends/Friends";
 import Media from "./components/Media/Media";
 import Feeds from "./components/Feeds/Feeds";
 
-const App = () => {
+const App = (props) => {
     return (
-        <BrowserRouter>
             <div className='app-wrapper'>
                 <Header />
                 <Navbar />
                 <div class='app-wrapper-content'>
-                    <Route path="/dialogs" component={Dialogs}/>
-                    <Route path="/profile" component={Profile}/>
-                    <Route path="/newpost" component={NewPost}/>
-                    <Route path="/friends" component={Friends}/>
-                    <Route path="/media" component={Media}/>
-                    <Route path="/feeds" component={Feeds}/>
+                    <Route path="/dialogs"
+                           render={() => <Dialogs
+                               state={props.state.dialogsPage}/>}/>
+                    <Route path="/profile"
+                           render={() => <Profile
+                               profilePage={props.state.profilePage}
+                               addPost={props.addPost}
+                               updateNewPostText={props.updateNewPostText}
+                           />}/>
+                    <Route path="/newpost"
+                           render={() => <NewPost
+                               profilePage={props.state.profilePage}
+                               addPost={props.addPost}
+                               updateNewPostText={props.updateNewPostText}
+                           />}/>
+                    <Route path="/friends"
+                           render={() => <Friends
+                               profilePage={props.state.profilePage}/>}/>
+                    <Route path="/media" render={() => <Media />}/>
+                    <Route path="/feeds" render={() => <Feeds />}/>
                 </div>
                 <Footer />
             </div>
-        </BrowserRouter>
     );
 }
 

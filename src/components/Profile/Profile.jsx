@@ -4,11 +4,15 @@ import UserHeader from './UserHeader/UserHeader'
 import UserContent from './UserContent/UserContent'
 
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div>
             <UserHeader />
-            <UserContent />
+            <UserContent
+                profilePage={props.profilePage}
+                addPost={props.addPost}
+                updateNewPostText = {props.updateNewPostText}
+            />
         </div>
     )
 }

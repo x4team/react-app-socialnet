@@ -1,14 +1,19 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 200px auto;
+
 }
 
 .dialogsItems {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
 }
 
 .dialogsItems .active{
     color: gold;
+    padding-top: 5px;
 }
 
 .dialog {
@@ -16,9 +21,76 @@
 }
 
 .messages {
-    padding: 10px
+    padding: 30px 20px 20px 20px;
+    font-size: 1.1em;
+    line-height: 1.7;
+    width: 40%;
+}
+
+.message:nth-child(2n+1) {
+    color: darkslateblue;
+    text-align: left;
+    background-color: seashell;
+}
+
+.message:nth-child(2n) {
+    color: darkslategray;
+    text-align: right;
+    background-color: azure;
 }
 
 .messages .message {
 
+}
+
+.img {
+    vertical-align: middle;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.name {
+    padding-left: 5px;
+    margin: auto;
+    font-size: 1.1em;
+    color: #2F2F2F;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.form__textarea {
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #CBCBCD;
+    padding-left: 10px;
+
+}
+
+.form__button {
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    height: 45px;
+    background: #FEAD11;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.07), inset 0px 0px 7px rgba(255, 255, 255, 0.07);
+    border-radius: 5px;
 }

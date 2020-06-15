@@ -5,3 +5,10 @@
     max-width: 100%;
 
 }
+
+.img {
+    padding-right: 5px;
+    vertical-align: middle;
+    width: 40px;
+    border-radius: 50%;
+}

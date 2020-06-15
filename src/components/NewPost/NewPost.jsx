@@ -5,7 +5,7 @@ import Posts from "../Profile/UserContent/Posts/Posts";
 const NewPost = (props) => {
     return (
         <div className={n.wrapper}>
-            <Posts message='Hi, how are you?' likesCount='50000'/>
+            <Posts profilePage={props.profilePage} addPost={props.addPost}/>
         </div>
     )
 };
