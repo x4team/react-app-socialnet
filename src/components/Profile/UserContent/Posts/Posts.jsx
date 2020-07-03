@@ -22,7 +22,7 @@ const Posts = (props) => {
             <div className={p.wrapper}>
                 <h3 className={p.h3}>My posts</h3>
                 <div className={p.form}>
-                    <textarea className={p.form__textarea} onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+                    <textarea className={p.form__textarea} onChange={onPostChange} ref={newPostElement} value={props.profilePage.newPostText}/>
                     <button className={p.form__button} onClick={ addPost }>SEND</button>
                 </div>
                 { postsElements }

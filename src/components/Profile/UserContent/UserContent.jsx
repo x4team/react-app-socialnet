@@ -12,7 +12,6 @@ const UserContent = (props) => {
                 />
                 <Posts profilePage={props.profilePage}
                        addPost={props.addPost}
-                       newPostText={props.profilePage.newPostText}
                        updateNewPostText={props.updateNewPostText}
                 />
             </div>

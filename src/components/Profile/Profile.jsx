@@ -11,7 +11,7 @@ const Profile = (props) => {
             <UserContent
                 profilePage={props.profilePage}
                 addPost={props.addPost}
-                updateNewPostText = {props.updateNewPostText}
+                updateNewPostText={props.updateNewPostText}
             />
         </div>
     )
