@@ -11,8 +11,7 @@ const UserContent = (props) => {
                        className={u.aside}
                 />
                 <Posts profilePage={props.profilePage}
-                       addPost={props.addPost}
-                       updateNewPostText={props.updateNewPostText}
+                       dispatch={props.dispatch}
                 />
             </div>
         </div>

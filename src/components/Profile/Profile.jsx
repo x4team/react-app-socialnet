@@ -2,6 +2,7 @@ import React from 'react';
 import p from './Profile.module.css';
 import UserHeader from './UserHeader/UserHeader'
 import UserContent from './UserContent/UserContent'
+import Posts from "./UserContent/Posts/Posts";
 
 
 const Profile = (props) => {
@@ -10,8 +11,7 @@ const Profile = (props) => {
             <UserHeader />
             <UserContent
                 profilePage={props.profilePage}
-                addPost={props.addPost}
-                updateNewPostText={props.updateNewPostText}
+                dispatch={props.dispatch}
             />
         </div>
     )

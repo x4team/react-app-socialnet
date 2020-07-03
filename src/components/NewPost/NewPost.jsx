@@ -6,8 +6,7 @@ const NewPost = (props) => {
     return (
         <div className={n.wrapper}>
             <Posts profilePage={props.profilePage}
-                   addPost={props.addPost}
-                   updateNewPostText={props.updateNewPostText}
+                   dispatch={props.dispatch}
             />
         </div>
     )
