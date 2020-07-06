@@ -4,9 +4,10 @@ import SergeyJPG from '../img/friends_avatars/Sergey.jpg';
 import VovanJPG from '../img/friends_avatars/Vovan.jpg';
 import ValeriyJPG from '../img/friends_avatars/Valeriy.jpg';
 import DimychJPG from '../img/friends_avatars/Dimych.jpg';
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+import sidebarReducer from "./sidebar-reducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 let store = {
     _state: {
@@ -45,7 +46,8 @@ let store = {
                 {id: 4, name: 'Mihail', avatar: MihailJPG},
                 {id: 5, name: 'Vovan', avatar: VovanJPG},
                 {id: 6, name: 'Valeriy', avatar: ValeriyJPG},
-            ]
+            ],
+            newMessageBody: ''
         },
         sidebar: {}
     },
@@ -60,28 +62,14 @@ let store = {
         this._callSubscriber = observer
     },
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                message: this._state.profilePage.newPostText,
-                likesCount: 0
-            };
 
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._state.sidebar = sidebarReducer(this._state.sidebar, action);
 
+        this._callSubscriber(this._state);
     }
 };
-
-
-export const addPostActionCreator = () => ({ type: ADD_POST }) // Так как в стрелочной функции мы возвращаем объект, то фигурные скобки нам надо обернуть в круглые скобки
-
-export const updateNewPostTextActionCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT , newText: text })
 
 export default store;
 // Обращаемся к store в консоли разработчика
