@@ -2,10 +2,6 @@ import React from 'react';
 import a from './../Aside.module.css';
 
 const MyFriends = (props) => {
-    let friendsElements = props.profilePage.friends.map(
-        p => <a className={a.avatar_block}>
-            <img className={a.img} src={p.avatar}/>
-            <span className={a.name}>{p.name}</span></a>);
 
     return (
         <div>
@@ -13,7 +9,7 @@ const MyFriends = (props) => {
                 Friends:
             </h3>
             <div className={a.avatar_block}>
-                { friendsElements }
+                { props.friendsElements }
             </div>
 
         </div>

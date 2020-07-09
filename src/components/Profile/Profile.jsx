@@ -10,8 +10,7 @@ const Profile = (props) => {
         <div>
             <UserHeader />
             <UserContent
-                profilePage={props.profilePage}
-                dispatch={props.dispatch}
+                //store={props.store}
             />
         </div>
     )

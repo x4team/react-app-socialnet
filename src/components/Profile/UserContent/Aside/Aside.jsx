@@ -8,7 +8,7 @@ const Aside = (props) => {
         <aside className={a.aside}>
             <div className={a.wrapper}>
               <AboutMe />
-              <MyFriends profilePage={props.profilePage}/>
+              <MyFriends store={props.store}/>
             </div>
         </aside>
     )

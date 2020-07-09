@@ -1,17 +1,17 @@
 import React from 'react';
 import u from './UserContent.module.css';
-import Posts from './Posts/Posts'
 import Aside from './Aside/Aside'
+import PostsContainer from "./Posts/PostsContainer";
 
 const UserContent = (props) => {
     return (
         <div className={u.user_content}>
             <div className={u.wrapper}>
-                <Aside profilePage={props.profilePage}
+                <Aside //store={props.store}
                        className={u.aside}
                 />
-                <Posts profilePage={props.profilePage}
-                       dispatch={props.dispatch}
+                <PostsContainer
+                       //store={props.store}
                 />
             </div>
         </div>
