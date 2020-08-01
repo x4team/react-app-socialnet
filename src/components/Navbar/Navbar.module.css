@@ -115,14 +115,14 @@ a {text-decoration: none; /*убираем подчеркивание текст
     transition: opacity .2s linear;
 }
 
-.friends {
+.users {
     margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
     width: 30px;
     height: 30px;
     background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZCkiPgo8ZWxsaXBzZSBjeD0iMTkuMTUiIGN5PSIxMC45Mzc1IiByeD0iMy4xNSIgcnk9IjMuOTM3NSIgZmlsbD0iIzgwODA4RiIvPgo8ZWxsaXBzZSBjeD0iMTkuMTQ5OCIgY3k9IjE5LjkzNzUiIHJ4PSI1Ljg1IiByeT0iNS4wNjI1IiBmaWxsPSIjODA4MDhGIi8+CjxlbGxpcHNlIGN4PSIxMi44NTAyIiBjeT0iMTAuOTM3NSIgcng9IjMuMTUiIHJ5PSIzLjkzNzUiIGZpbGw9IiM3MDZGN0YiLz4KPGVsbGlwc2UgY3g9IjEyLjg1IiBjeT0iMTkuOTM3NSIgcng9IjUuODUiIHJ5PSI1LjA2MjUiIGZpbGw9IiM3MDZGN0YiLz4KPC9nPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9kIiB4PSIwIiB5PSIwIiB3aWR0aD0iMzEuOTk5OCIgaGVpZ2h0PSIzMiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiPgo8ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIvPgo8ZmVPZmZzZXQvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzLjUiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMTEgMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9ImVmZmVjdDFfZHJvcFNoYWRvdyIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImVmZmVjdDFfZHJvcFNoYWRvdyIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K") center no-repeat;
 }
 
-.friends:hover {
+.users:hover {
     padding: 0;
     margin: 0;
     width: 30px;
@@ -133,7 +133,7 @@ a {text-decoration: none; /*убираем подчеркивание текст
     transition: opacity .2s linear;
 }
 
-.friends.activeLink {
+.users.activeLink {
     padding: 0;
     margin: 0;
     width: 30px;
@@ -144,14 +144,14 @@ a {text-decoration: none; /*убираем подчеркивание текст
     transition: opacity .2s linear;
 }
 
-.media {
+.music {
     margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
     width: 30px;
     height: 30px;
     background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZCkiPgo8cmVjdCB4PSI3IiB5PSIzIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IiM1RTVENjkiLz4KPGVsbGlwc2UgY3g9IjExLjUiIGN5PSIxMi42NDMiIHJ4PSIyLjUiIHJ5PSIzLjIxNDI5IiBmaWxsPSJ3aGl0ZSIvPgo8ZWxsaXBzZSBjeD0iMjAuNSIgY3k9IjEyLjY0MyIgcng9IjIuNSIgcnk9IjMuMjE0MjkiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjciIHk9IjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIyLjU3MTQzIiBmaWxsPSIjNTE1MDVCIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfZCIgeD0iMCIgeT0iMCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIi8+CjxmZU9mZnNldCBkeT0iNCIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzLjUiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMTEgMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9ImVmZmVjdDFfZHJvcFNoYWRvdyIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImVmZmVjdDFfZHJvcFNoYWRvdyIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K") center no-repeat;
 }
 
-.media:hover {
+.music:hover {
     padding: 0;
     margin: 0;
     width: 30px;
@@ -162,7 +162,7 @@ a {text-decoration: none; /*убираем подчеркивание текст
     transition: opacity .2s linear;
 }
 
-.media.activeLink {
+.music.activeLink {
     padding: 0;
     margin: 0;
     width: 30px;

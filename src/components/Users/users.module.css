@@ -1,0 +1,19 @@
+.userPhoto {
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.users {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.lalal {
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+}

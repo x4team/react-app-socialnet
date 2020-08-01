@@ -11,8 +11,8 @@ const Navbar = () => {
                     <NavLink to="/profile" className={n.home} activeClassName={n.activeLink}></NavLink>
                     <NavLink to="/newpost" className={n.newpost} activeClassName={n.activeLink}></NavLink>
                     <NavLink to="/dialogs" className={n.message} activeClassName={n.activeLink}></NavLink>
-                    <NavLink to="/friends" className={n.friends} activeClassName={n.activeLink}></NavLink>
-                    <NavLink to="/media" className={n.media} activeClassName={n.activeLink}></NavLink>
+                    <NavLink to="/users" className={n.users} activeClassName={n.activeLink}></NavLink>
+                    <NavLink to="/music" className={n.music} activeClassName={n.activeLink}></NavLink>
                     <NavLink to="/feeds" className={n.feeds} activeClassName={n.activeLink}></NavLink>
                 </menu>
             </nav>

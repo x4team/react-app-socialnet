@@ -1,0 +1,19 @@
+.trackPhoto {
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper {
+    margin: 20px;
+    padding: 20px;
+}
+
+.tracks {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.lalal {
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+}

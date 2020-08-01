@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 import './App.css';
 import Header from "./components/Header/Header";
@@ -8,34 +8,40 @@ import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
 import NewPost from "./components/NewPost/NewPost";
 import Friends from "./components/Friends/Friends";
-import Media from "./components/Media/Media";
+import Music from "./components/Music/Music";
 import Feeds from "./components/Feeds/Feeds";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
+import MusicContainer from "./components/Music/MusicContainer";
 
 const App = (props) => {
     return (
-            <div className='app-wrapper'>
-                <Header />
-                <Navbar />
-                <div className='app-wrapper-content'>
-                    <Route path="/dialogs"
-                           render={() => <DialogsContainer
-                               />}/>
-                    <Route path="/profile"
-                           render={() => <Profile
-                           />}/>
-                    <Route path="/newpost"
-                           render={() => <NewPost
-                               store={props.store}
-                           />}/>
-                    <Route path="/friends"
-                           render={() => <Friends
-                               profilePage={props.state.profilePage}/>}/>
-                    <Route path="/media" render={() => <Media />}/>
-                    <Route path="/feeds" render={() => <Feeds />}/>
-                </div>
-                <Footer />
+        <div className='app-wrapper'>
+            <Header/>
+            <Navbar/>
+            <div className='app-wrapper-content'>
+                <Route path="/dialogs"
+                       render={() => <DialogsContainer
+                       />}/>
+                <Route path="/profile"
+                       render={() => <Profile
+                       />}/>
+                <Route path="/users"
+                       render={() => <UsersContainer />}/>
+
+                <Route path="/newpost"
+                       render={() => <NewPost
+                           store={props.store}
+                       />}/>
+                <Route path="/friends"
+                       render={() => <Friends
+                           profilePage={props.state.profilePage}/>}/>
+                <Route path="/music"
+                       render={() => <MusicContainer/>}/>
+                <Route path="/feeds" render={() => <Feeds/>}/>
             </div>
+            <Footer/>
+        </div>
     );
 }
 
