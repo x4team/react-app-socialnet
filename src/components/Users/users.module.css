@@ -17,3 +17,7 @@
 .lalal {
     grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
 }
+
+.selectedPage {
+    font-weight: bold;
+}
