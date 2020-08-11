@@ -1,7 +1,12 @@
 import React from 'react';
 import u from './UserHeader.module.css';
+import Preloader from "../../common/Preloader/Preloader";
 
-const UserHeader = () => {
+const UserHeader = (props) => {
+    if(!props.profile) {
+        return <Preloader />
+    }
+
     return (
         <div className={u.user_header}>
             <div className={u.wrapper}>
@@ -14,6 +19,7 @@ const UserHeader = () => {
                     </div>
                     <div className={u.status}>
                         <div className={u.h1}>Good where we are.</div>
+                        <img src={props.profile.photos.small}/>
                     </div>
                 </div>
             </div>

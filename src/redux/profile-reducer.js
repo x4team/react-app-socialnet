@@ -7,6 +7,7 @@ import ValeriyJPG from "../img/friends_avatars/Valeriy.jpg";
 
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 //Инициализируем стартовый state
 let initialState = {
@@ -26,7 +27,8 @@ let initialState = {
         {id: 5, name: 'Vovan', avatar: VovanJPG},
         {id: 6, name: 'Valeriy', avatar: ValeriyJPG},
     ],
-    newPostText: 'it-kamasutra'
+    newPostText: 'it-kamasutra',
+    profile: null
 }
 
 // Принимает часть state
@@ -48,11 +50,16 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 newPostText: action.newText
             };
+        case SET_USER_PROFILE:
+            return {
+                ...state,
+                profile: action.profile
+            }
         default:
             return {...state};
     }
 };
 export const addPostActionCreator = () => ({ type: ADD_POST }) // Так как в стрелочной функции мы возвращаем объект, то фигурные скобки нам надо обернуть в круглые скобки
 export const updateNewPostTextActionCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT , newText: text })
-
+export const setUserProfile = ( profile ) => ({type: SET_USER_PROFILE, profile})
 export default profileReducer;
