@@ -7,7 +7,7 @@ const Aside = (props) => {
     return (
         <aside className={a.aside}>
             <div className={a.wrapper}>
-              <AboutMe />
+              <AboutMe profile={props.profile}/>
               <MyFriends store={props.store}/>
             </div>
         </aside>

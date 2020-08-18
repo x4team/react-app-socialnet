@@ -7,7 +7,7 @@ const UserContent = (props) => {
     return (
         <div className={u.user_content}>
             <div className={u.wrapper}>
-                <Aside //store={props.store}
+                <Aside profile={props.profile}
                        className={u.aside}
                 />
                 <PostsContainer

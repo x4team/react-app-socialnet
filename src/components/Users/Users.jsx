@@ -3,6 +3,7 @@ import styles from "./users.module.css";
 import userPhoto from "../../assets/images/user.png";
 import React from "react";
 import {NavLink} from "react-router-dom";
+import {usersAPI} from "../../API/api";
 
 let Users = (props) => {
 
@@ -19,8 +20,7 @@ let Users = (props) => {
                 <div>
                     {pages.map(p => {
                         return <span className={props.currentPage === p && styles.selectedPage}
-                                     onClick={(e) => {
-                                         props.onPageChanged(p);
+                                     onClick={(e) => {props.onPageChanged(p);
                                      }}>{p}</span>
                     })}
                 </div>
@@ -36,10 +36,25 @@ let Users = (props) => {
             <div>
                 {u.followed
                     ? <button onClick={() => {
-                        props.unfollow(u.id)
+
+                        usersAPI.sendUnfollowUser(u.id).then(data => {
+                            if (data.resultCode == 0) {
+                                props.unfollow(u.id)
+                            }
+                        });
+
+
+
                     }}>Unfollow</button>
                     : <button onClick={() => {
-                        props.follow(u.id)
+
+                        usersAPI.sendFollowUser(u.id).then(data => {
+                          if (data.resultCode == 0) {
+                              props.follow(u.id);
+                          }
+                        });
+
+
                     }}>Follow</button>
                 }
             </div>
