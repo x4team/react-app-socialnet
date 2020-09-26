@@ -4,6 +4,7 @@ import SergeyJPG from "../img/friends_avatars/Sergey.jpg";
 import MihailJPG from "../img/friends_avatars/Mihail.jpg";
 import VovanJPG from "../img/friends_avatars/Vovan.jpg";
 import ValeriyJPG from "../img/friends_avatars/Valeriy.jpg";
+import {usersAPI} from "../API/api";
 
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
@@ -62,4 +63,15 @@ const profileReducer = (state = initialState, action) => {
 export const addPostActionCreator = () => ({ type: ADD_POST }) // Так как в стрелочной функции мы возвращаем объект, то фигурные скобки нам надо обернуть в круглые скобки
 export const updateNewPostTextActionCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT , newText: text })
 export const setUserProfile = ( profile ) => ({type: SET_USER_PROFILE, profile})
+export const getUserProfile = (userId) => {
+    return (dispatch) => {
+        if(!userId) {
+            userId = 2;
+        }
+        usersAPI.getProfile(userId).then(data => {
+            dispatch(setUserProfile(data));
+        });
+    }
+}
+
 export default profileReducer;
