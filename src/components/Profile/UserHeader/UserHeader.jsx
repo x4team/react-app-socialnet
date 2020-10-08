@@ -1,7 +1,7 @@
 import React from 'react';
 import u from './UserHeader.module.css';
 import Preloader from "../../common/Preloader/Preloader";
-
+import ProfileStatus from "./ProfileStatus"
 const UserHeader = (props) => {
     if (!props.profile) {
         return <Preloader/>
@@ -20,7 +20,8 @@ const UserHeader = (props) => {
                         <div className={u.name}>{props.profile.fullName}</div>
                     </div>
                     <div className={u.status}>
-                        <div className={u.h1}>My Status</div>
+                        <ProfileStatus status={"Hello my friends!"}/>
+                        {/*<div className={u.h1}>My Status</div>*/}
                     </div>
                 </div>
             </div>
